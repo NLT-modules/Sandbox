@@ -1,5 +1,5 @@
 # Inhoud
 
 ```{contents} Table of Contents
-:depth: 3
+:filter: local
 ```
