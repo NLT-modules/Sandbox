@@ -9,7 +9,7 @@ project:
   license: CC-BY-SA-4.0
   jupyter:
     lite: true
-  github: https://github.com/NLT-modules/Template # change this to your repo
+  github: https://github.com/NLT-modules/Sandbox # change this to your repo
   exports:
     - format: pdf
       template: plain_latex_book # myst templates list --tex
@@ -32,4 +32,4 @@ site:
     hide_authors: true
   actions:
     - title: report issue
-      url: https://github.com/NLT-modules/Template/issues # change this to your repo
+      url: https://github.com/NLT-modules/Sandbox/issues # change this to your repo
