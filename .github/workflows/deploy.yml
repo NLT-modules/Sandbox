@@ -42,7 +42,7 @@ jobs:
       -  uses: wtfjoke/setup-tectonic@v3 #https://github.com/marketplace/actions/setup-tectonic
 #      -  run: tectonic main.tex
       - name: Build and export pdf 
-        run: myst export --pdf
+        run: myst build --pdf
 
      # Bouwen van de site   
       - name: Build HTML Assets
