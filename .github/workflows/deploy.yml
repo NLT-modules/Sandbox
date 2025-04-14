@@ -40,8 +40,10 @@ jobs:
 
       - name: Install tectonic via curl
         run: |
-          curl --proto '=https' --tlsv1.2 -sSf https://drop-sh.fullyjustified.net/install.sh | sh
-          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+            curl -L -o tectonic.tar.gz https://github.com/tectonic-typesetting/tectonic/releases/download/0.13.1/tectonic-0.13.1-x86_64-unknown-linux-gnu.tar.gz
+            tar -xzf tectonic.tar.gz
+            sudo mv tectonic*/tectonic /usr/local/bin/
+            tectonic --version
       - name: Build and export pdf 
         run: myst export --pdf
 
