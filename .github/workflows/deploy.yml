@@ -37,8 +37,9 @@ jobs:
         run: npm install -g mystmd
 
       # Bouwen van boek met pdf
-      - name: Install LaTeX
-        run: sudo apt-get install -y texlive-full  
+
+      - name: Install tectonic (LaTeX engine)
+        run: sudo apt-get install -y tectonic
       - name: Build and export pdf 
         run: myst export --pdf
 
