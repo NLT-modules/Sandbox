@@ -39,8 +39,8 @@ jobs:
       # Bouwen van boek met pdf
       - name: Install LaTeX
         run: sudo apt-get install -y texlive-full  
-      - name: Build pdf 
-        run: myst build --pdf
+      - name: Build and export pdf 
+        run: myst export --pdf
 
      # Bouwen van de site   
       - name: Build HTML Assets
