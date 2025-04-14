@@ -43,11 +43,11 @@ jobs:
       #-  run: tectonic main.tex
       - name: Build and export pdf 
         run: myst build --pdf
-      # - name: mv PDF
-      #   run: |
-      #    find _build -name 'Boek.pdf' -exec cp {} Exports/Boek.pdf \;
-      - name: Export PDF
-        run: myst export #--pdf
+      - name: mv PDF
+        run: |
+         find _build -name 'Boek.pdf' -exec cp {} Exports/Boek.pdf \;
+      # - name: Export PDF
+      #   run: myst export #--pdf
 
      # Bouwen van de site   
       - name: Build HTML Assets
