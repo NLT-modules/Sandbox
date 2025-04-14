@@ -43,10 +43,10 @@ jobs:
       #-  run: tectonic main.tex
       - name: Build and export pdf 
         run: myst build --pdf
-      - name: mv PDF
-        run: |
-          mkdir -p Exports
-          cp _build/pdf/Boek.pdf Exports/Boek.pdf
+      # - name: mv PDF
+      #   run: |
+      #     mkdir -p Exports
+      #     cp _build/pdf/Boek.pdf Exports/Boek.pdf
       - name: Export PDF
         run: myst export --pdf
 
