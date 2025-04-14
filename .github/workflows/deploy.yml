@@ -38,14 +38,9 @@ jobs:
 
       # Bouwen van boek met pdf
 
+      - name: Install LaTeX tools
+        run: sudo apt-get update && sudo apt-get install -y texlive-xetex latexmk texlive-fonts-recommended texlive-latex-recommended texlive-latex-extra
 
-      - name: Install xelatex + latexmk + texlive
-        run: sudo apt-get update && sudo apt-get install -y \
-          texlive-xetex \
-          latexmk \
-          texlive-fonts-recommended \
-          texlive-latex-recommended \
-          texlive-latex-extra
 
       #- name: Install tectonic via curl
       # -  uses: wtfjoke/setup-tectonic@v3 #https://github.com/marketplace/actions/setup-tectonic
