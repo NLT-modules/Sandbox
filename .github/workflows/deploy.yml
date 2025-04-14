@@ -40,8 +40,8 @@ jobs:
 
       - name: Install tectonic via curl
         run: |
-            curl -L -o tectonic.tar.gz https://github.com/tectonic-typesetting/tectonic/releases/download/0.13.1/tectonic-0.13.1-x86_64-unknown-linux-gnu.tar.gz
-            tar -xzf tectonic.tar.gz
+            curl -L -o tectonic.zip https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%400.13.1/tectonic-0.13.1-x86_64-unknown-linux-gnu.zip
+            unzip tectonic.zip
             sudo mv tectonic*/tectonic /usr/local/bin/
             tectonic --version
       - name: Build and export pdf 
