@@ -45,8 +45,6 @@ jobs:
       #-  run: tectonic main.tex
       - name: Build and export pdf 
         run: myst build --pdf
-      - name: List PDF output dir
-        run: ls -l _build/pdf
       - name: Find and move PDF
         run: |
           mkdir -p Exports
