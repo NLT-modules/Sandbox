@@ -39,11 +39,8 @@ jobs:
       # Bouwen van boek met pdf
 
       - name: Install tectonic via curl
-        run: |
-            curl -L -o tectonic.zip https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%400.13.1/tectonic-0.13.1-x86_64-unknown-linux-gnu.zip
-            unzip tectonic.zip
-            sudo mv tectonic*/tectonic /usr/local/bin/
-            tectonic --version
+      - uses: wtfjoke/setup-tectonic@v3
+        run: tectonic main.tex
       - name: Build and export pdf 
         run: myst export --pdf
 
