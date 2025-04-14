@@ -35,12 +35,16 @@ jobs:
           node-version: 18.x
       - name: Install MyST Markdown
         run: npm install -g mystmd
-      # - name: Build pdf
-      #   run: myst build --pdf
-      - name: Build HTML Assets
-        run: myst build --html
+
+      # Bouwen van boek met pdf
+      - name: Install LaTeX
+        run: sudo apt-get install -y texlive-full  
       - name: Build pdf 
         run: myst build --pdf
+
+     # Bouwen van de site   
+      - name: Build HTML Assets
+        run: myst build --html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
