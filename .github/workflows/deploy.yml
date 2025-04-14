@@ -40,9 +40,13 @@ jobs:
 
       #- name: Install tectonic via curl
       -  uses: wtfjoke/setup-tectonic@v3 #https://github.com/marketplace/actions/setup-tectonic
-#      -  run: tectonic main.tex
+      #-  run: tectonic main.tex
       - name: Build and export pdf 
         run: myst build --pdf
+      - name: mv PDF
+        run: |
+          mkdir -p Exports
+          cp _build/pdf/book.pdf Exports/Boek.pdf
 
      # Bouwen van de site   
       - name: Build HTML Assets
