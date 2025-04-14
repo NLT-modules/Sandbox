@@ -46,7 +46,7 @@ jobs:
       - name: mv PDF
         run: |
           mkdir -p Exports
-          cp _build/pdf/book.pdf Exports/Boek.pdf
+          cp _build/pdf/Boek.pdf Exports/Boek.pdf
 
      # Bouwen van de site   
       - name: Build HTML Assets
