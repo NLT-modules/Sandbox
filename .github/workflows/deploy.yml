@@ -39,7 +39,7 @@ jobs:
       # Bouwen van boek met pdf
 
       - name: Install tectonic via curl
-      - uses: wtfjoke/setup-tectonic@v3
+        uses: wtfjoke/setup-tectonic@v3 #https://github.com/marketplace/actions/setup-tectonic
         run: tectonic main.tex
       - name: Build and export pdf 
         run: myst export --pdf
