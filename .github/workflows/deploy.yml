@@ -53,9 +53,15 @@ jobs:
         run: |
           mkdir -p Exports
           find _build -name '*.pdf' -exec cp {} Exports/Boek.pdf \;
-              
-      # - name: Export PDF
-      #   run: myst export #--pdf
+
+      - name: Commit en push Exports-folder
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add Exports/Boek.pdf
+          git commit -m "📦 Update Boek.pdf (auto-export)"
+          git push
+
 
      # Bouwen van de site   
       - name: Build HTML Assets
